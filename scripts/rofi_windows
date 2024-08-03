@@ -1,13 +1,11 @@
-#!/usr/bin/env bash
-
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+#!/usr/bin/env fish
 
 # Import Current Theme
-DIR="$HOME/.config/bspwm"
-STYLE=$(hostname)
-RASI="$DIR/themes/$STYLE/rofi/windows.rasi"
+set DIR "$HOME/.config/bspwm"
+set STYLE (hostname)
+set RASI "$DIR/themes/$STYLE/rofi/windows.rasi"
 
 # Run
 rofi \
     -show window \
-	-theme ${RASI}
+    -theme $RASI

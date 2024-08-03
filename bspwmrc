@@ -202,3 +202,5 @@ running_check="($(pgrep -c 'aw-qt'))"
 if [[ ${running_check[*]} -eq 0 ]]; then
 	aw-qt &
 fi
+
+sinh-x-wallpaper refresh &

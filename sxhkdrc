@@ -29,6 +29,8 @@ alt + F2
 # Rofi Menus/Applets
 super + {b,m,n,r,s,t,w,x}
 	{rofi_bluetooth,rofi_music,nmd,rofi_asroot,rofi_screenshot,rofi_themes,rofi_windows,rofi_powermenu}
+super + ctrl + w
+  window_pull
 
 ##---------- Applications ----------##
 
@@ -54,7 +56,9 @@ ctrl + alt + m
 
 # Pomodoro notify-send
 ctrl + alt + p
-  notify-send "Pomodoro List" "$(pomodoro list)"
+  pomodoro_list
+super + control p
+  pomodoro queue
 
 # Calendar
 super + ctrl + F5
@@ -63,6 +67,8 @@ super + ctrl + F5
 super + ctrl + F12
   displaykey.fish
 
+ctrl + alt + w
+	sinh-x-wallpaper refresh
 # Lockscreen
 # ctrl + alt + l
 #     betterlockscreen --lock
