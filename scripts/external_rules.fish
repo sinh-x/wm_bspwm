@@ -9,7 +9,7 @@ set current_desktop (bspc query -D -d focused --names)
 set current_monitor (bspc query -d focused  -M --names)
 set title (xprop -id $wid '\t$0' _NET_WM_NAME | cut -f 2)
 
-set left_monitor eDP-1
+set left_monitor $LEFT_MONITOR
 
 function pick_desktop -a w_class -a class_set -a desktop_set -a desire_desktop_left -a desire_desktop_central
     if contains $$w_class $$class_set
@@ -28,7 +28,7 @@ if string match '*_crx_*' "$title"
     exit 0
 end
 
-set -x web_class Google-chrome Mircrosoft-edge-dev Firefox
+set -x web_class Google-chrome Mircrosoft-edge-dev firefox
 set -x web_desktop 1 2 16 17
 
 pick_desktop class web_class web_desktop 1 16

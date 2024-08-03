@@ -187,20 +187,24 @@ bash ~/.fehbg
 # Start bspwm scripts
 bspbar &
 bspcomp &
-sleep 0.5
 bspdunst &
 copyq &
 fcitx5 &
 flameshot &
+
+sleep 1
 
 running_check="($(pgrep -c 'input-leap'))"
 if [[ ${running_check[*]} -eq 0 ]]; then
 	input-leap &
 fi
 
+sinh-x-wallpaper refresh &
+dislaykey.fish &
+
+sleep 3
 running_check="($(pgrep -c 'aw-qt'))"
 if [[ ${running_check[*]} -eq 0 ]]; then
 	aw-qt &
 fi
 
-sinh-x-wallpaper refresh &

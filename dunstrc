@@ -3,7 +3,7 @@
 [global]
 monitor = 0
 follow = mouse
-width = 1200
+width = 400
 height = 600
 origin = top-right
 offset = 10x42
