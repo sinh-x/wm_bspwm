@@ -86,6 +86,7 @@ bspc rule -a Bitwarden state=floating locked=on sticky=on
 bspc rule -a dropdown state=floating locked=on sticky=on
 bspc rule -a bashtop state=floating sticky=on locked=on center=true rectangle=1400x1400+0+0
 bspc rule -a fromscratch state=floating sticky=on locked=on center=true rectangle=1400x1400+0+0
+bspc rule -a pomodoro state=floating sticky=on locked=on center=true rectangle=1400x1400+0+0
 bspc rule -a flameshot state=floating
 bspc rule -a Steam state=floating
 bspc rule -a mplayer2 state=floating
@@ -208,3 +209,4 @@ if [[ ${running_check[*]} -eq 0 ]]; then
 	aw-qt &
 fi
 
+pomodoro_start && pomodoro_start
