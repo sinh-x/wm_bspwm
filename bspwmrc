@@ -192,7 +192,7 @@ bspdunst &
 copyq &
 fcitx5 &
 flameshot &
-
+viber &
 sleep 1
 
 running_check="($(pgrep -c 'input-leap'))"
@@ -209,4 +209,5 @@ if [[ ${running_check[*]} -eq 0 ]]; then
 	aw-qt &
 fi
 
-pomodoro_start && pomodoro_start
+pomodoro_start &
+
