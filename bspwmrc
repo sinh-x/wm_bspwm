@@ -209,5 +209,9 @@ if [[ ${running_check[*]} -eq 0 ]]; then
 	aw-qt &
 fi
 
-pomodoro_start &
+running_check="($(pgrep -c 'pomodoro'))"
+if [[ ${running_check[*]} -eq 0 ]]; then
+	nohup pomodoro &
+fi
 
+displaykey.fish &
